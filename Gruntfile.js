@@ -47,7 +47,7 @@ module.exports = function (grunt) {
             },
             markdown: {
                 files: ['docs/src/*.md'],
-                tasks: ['markdown','livereload']
+                tasks: ['markdown','copy:markdown']
             }
         },
         connect: {
@@ -330,7 +330,6 @@ module.exports = function (grunt) {
             'livereload-start',
             'connect:markdown',
             'open:markdown',
-            'copy:markdown',
             'watch'
         ])
     ]);

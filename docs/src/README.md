@@ -1,5 +1,4 @@
 # Gerente Markdown HTML 
-**********************
 
 
 ## 1. Getting Started
