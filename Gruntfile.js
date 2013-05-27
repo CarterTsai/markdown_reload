@@ -46,7 +46,7 @@ module.exports = function (grunt) {
                 tasks: ['livereload']
             },
             markdown: {
-                files: ['docs/src/*.md'],
+                files: ['./README.md'],
                 tasks: ['markdown','copy:markdown']
             }
         },
@@ -72,7 +72,7 @@ module.exports = function (grunt) {
                     middleware: function (connect) {
                         return [
                             lrSnippet,
-                            mountFolder(connect, 'docs')
+                            mountFolder(connect, '.tmp'),
                         ];
                     }
                 }
@@ -151,8 +151,8 @@ module.exports = function (grunt) {
         },
         markdown: {
             all:{
-                files:['docs/src/*.md'],
-                dest:'docs/',
+                files:['README.md'],
+                dest:'.tmp',
                 options: {
                     gfm: true,
                     highlight: 'manual',
