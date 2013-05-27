@@ -47,7 +47,7 @@ module.exports = function (grunt) {
             },
             markdown: {
                 files: ['./README.md'],
-                tasks: ['markdown','copy:markdown']
+                tasks: ['markdown', 'copy:markdown']
             }
         },
         connect: {
@@ -150,9 +150,9 @@ module.exports = function (grunt) {
             }
         },
         markdown: {
-            all:{
-                files:['README.md'],
-                dest:'.tmp',
+            all: {
+                files: ['README.md'],
+                dest: '.tmp',
                 options: {
                     gfm: true,
                     highlight: 'manual',
@@ -263,13 +263,13 @@ module.exports = function (grunt) {
                 }]
             },
             markdown: {
-                files: [{ 
+                files: [{
                     expand: true,
                     cwd: 'docs/src/',
                     dest: '.',
                     src: ['README.md']
                 }]
-            } 
+            }
         },
         bower: {
             all: {
@@ -325,12 +325,10 @@ module.exports = function (grunt) {
     ]);
     
     grunt.registerTask('mk', [
-        grunt.task.run([
-            'markdown',
-            'livereload-start',
-            'connect:markdown',
-            'open:markdown',
-            'watch'
-        ])
+        'markdown',
+        'livereload-start',
+        'connect:markdown',
+        'open:markdown',
+        'watch'
     ]);
 };
