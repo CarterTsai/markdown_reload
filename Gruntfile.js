@@ -261,7 +261,15 @@ module.exports = function (grunt) {
                         '.htaccess'
                     ]
                 }]
-            }
+            },
+            markdown: {
+                files: [{ 
+                    expand: true,
+                    cwd: 'docs/src/',
+                    dest: '.',
+                    src: ['README.md']
+                }]
+            } 
         },
         bower: {
             all: {
@@ -322,6 +330,7 @@ module.exports = function (grunt) {
             'livereload-start',
             'connect:markdown',
             'open:markdown',
+            'copy:markdown',
             'watch'
         ])
     ]);
