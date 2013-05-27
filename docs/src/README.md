@@ -1,21 +1,22 @@
-Test Documents
----------------
+# Gerente Markdown HTML 
+**********************
 
-my using markdown on grunt
 
-* 1 
-* 2 
-* 3
-* 5
-* 6
+## 1. Getting Started
+Install grunt plugin for this project  
 
-### using 
+```shell
+npm install
+```
 
-12345-12345
+## 2. Run Livereload and open docs/README.html with browser
+```shell
+grunt mk
+```
 
-123355999101010
---------
+## 3. Edit docs/src/README.md
 
-# h1
-## h2
-### h3
+
+## 4. License
+Copyright (c) 2013 Tsai Ming-Hsien (Carter Tsai)  
+Licensed under the MIT license.
